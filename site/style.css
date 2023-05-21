@@ -3,6 +3,22 @@
   box-sizing: border-box;
 }
 
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dl dt {
+  width: 25%;
+  text-align: center;
+}
+dl dd {
+  width: 75%;
+}
+
+.fixed-width {
+  font-family: "Liberation Serif", "Noto Sans CJK JP", "TakaoGothic", "VL Gothic", "Yu Gothic", "MS Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Osaka-Mono", "Noto Sans JP", Monospace;
+}
+
 body {
   margin: 0;
   font-size: 0;
@@ -90,8 +106,16 @@ body > section .googleMap {
 
 @media screen and (max-width: 959px) {
   /* 959px以下に適用されるCSS（タブレット用） */
+  body {
+    display: block;
+    padding: 0;
+    padding: 0;
+  }
   body > * {
-    margin: 0;
+    margin: 0 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
   body > section .googleMap {
     width: 100%;
